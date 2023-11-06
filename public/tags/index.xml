@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Mona Maret</title>
+    <link>https://monamaret.com/tags/</link>
+    <description>Recent content in Tags on Mona Maret</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://monamaret.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>css</title>
+      <link>https://monamaret.com/@css/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://monamaret.com/@css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>https://monamaret.com/@html/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://monamaret.com/@html/</guid>
+      <description>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It is often assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript. Wikipedia</description>
+    </item>
+    
+    <item>
+      <title>markdown</title>
+      <link>https://monamaret.com/@markdown/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://monamaret.com/@markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tag I</title>
+      <link>https://monamaret.com/@tag-i/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://monamaret.com/@tag-i/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tag II</title>
+      <link>https://monamaret.com/@tag-ii/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://monamaret.com/@tag-ii/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tag III</title>
+      <link>https://monamaret.com/@tag-iii/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://monamaret.com/@tag-iii/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

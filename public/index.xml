@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Index on Mona Maret</title>
+    <link>https://monamaret.com/</link>
+    <description>Recent content in Index on Mona Maret</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://monamaret.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Code Syntax Guide</title>
+      <link>https://monamaret.com/code-syntax/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://monamaret.com/code-syntax/</guid>
+      <description>Inline Code This is Inline Code
+Only pre This is pre text Code block with backticks &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;utf-8&amp;#34; /&amp;gt; &amp;lt;title&amp;gt;Example HTML5 Document&amp;lt;/title&amp;gt; &amp;lt;meta name=&amp;#34;description&amp;#34; content=&amp;#34;Sample article showcasing basic Markdown syntax and formatting for HTML elements.&amp;#34; /&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;p&amp;gt;Test&amp;lt;/p&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; Code block with backticks and language specified 1 2 3 4 5 6 7 8 9 10 11 12 13 14 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;utf-8&amp;#34; /&amp;gt; &amp;lt;title&amp;gt;Example HTML5 Document&amp;lt;/title&amp;gt; &amp;lt;meta name=&amp;#34;description&amp;#34; content=&amp;#34;Sample article showcasing basic Markdown syntax and formatting for HTML elements.</description>
+    </item>
+    
+    <item>
+      <title>Key0</title>
+      <link>https://monamaret.com/key0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://monamaret.com/key0/</guid>
+      <description>Header A Cursus nisi fames at class integer volutpat sem phasellus, pharetra rutrum proin imperdiet aenean a ac, mollis dapibus id morbi accumsan eleifend magna. Habitant vitae pharetra consequat vulputate cras varius luctus feugiat laoreet, lacus eleifend cursus aptent purus quisque nam netus, mus quis interdum ligula et vel sagittis magna. Enim sodales cubilia ad fames mi faucibus quisque risus, ultrices massa libero interdum congue nec imperdiet nostra, himenaeos nunc magna potenti augue ac sagittis.</description>
+    </item>
+    
+    <item>
+      <title>Key1</title>
+      <link>https://monamaret.com/key1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://monamaret.com/key1/</guid>
+      <description>Header A Lorem ipsum dolor sit amet consectetur adipiscing, elit lobortis felis magnis ullamcorper placerat elementum, donec auctor nisi nunc facilisis. Porttitor curabitur eros inceptos senectus aptent vel facilisi dignissim, pharetra suspendisse volutpat vitae molestie semper vivamus, ut sapien risus cursus leo nulla habitasse. Massa volutpat nibh semper urna ligula hendrerit torquent, venenatis phasellus magnis inceptos diam pharetra maecenas accumsan, erat per elementum pretium laoreet sagittis.
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; {{ partial &amp;#34;head.</description>
+    </item>
+    
+  </channel>
+</rss>

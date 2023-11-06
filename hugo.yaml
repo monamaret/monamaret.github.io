@@ -1,0 +1,59 @@
+baseURL: https://monamaret.com/
+languageCode: en-us
+title: Mona Maret 
+theme: index
+
+pygmentUseClasses: true
+enableInLineShortcodes: true
+
+markup:
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    lineNos: false
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  showDescriptioninHome: true
+  # hideAllTagsinHome: true
+  searchBoxPlaceholder: "Type here to search..."
+  titleIcon: index.png
+  headers:
+    key: Title
+    value: Tags
+    # value: Description
+
+permalinks:
+  tags: "@:slug"
+
+taxonomies:
+  tag: "tags"
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # for search
+
+privacy:
+  vimeo:
+    disabled: false
+    simple: true
+  twitter:
+    disabled: false
+    enableDNT: true
+    simple: true
+  instagram:
+    disabled: false
+    simple: true
+  youtube:
+    disabled: false
+    privacyEnhanced: true
+
+services:
+  instagram:
+    disableInlineCSS: true
+  twitter:
+    disableInlineCSS: true

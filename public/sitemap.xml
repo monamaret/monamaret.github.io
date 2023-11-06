@@ -2,32 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://monamaret.com/code-syntax/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <loc>https://monamaret.com/basic-neovim/</loc>
   </url><url>
-    <loc>https://monamaret.com/@css/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <loc>https://monamaret.com/installing-services-with-systemd-basics/</loc>
   </url><url>
-    <loc>https://monamaret.com/@html/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <loc>https://monamaret.com/tmux-config/</loc>
+  </url><url>
+    <loc>https://monamaret.com/@dotfiles/</loc>
   </url><url>
     <loc>https://monamaret.com/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://monamaret.com/@markdown/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
+    <loc>https://monamaret.com/@linux/</loc>
+  </url><url>
+    <loc>https://monamaret.com/@lsp/</loc>
+  </url><url>
+    <loc>https://monamaret.com/dotfiles-management/</loc>
+  </url><url>
+    <loc>https://monamaret.com/neovim-lsp/</loc>
+  </url><url>
+    <loc>https://monamaret.com/@nvim/</loc>
+  </url><url>
+    <loc>https://monamaret.com/remote-tmux/</loc>
+  </url><url>
+    <loc>https://monamaret.com/tmux-standard-shortcuts/</loc>
+  </url><url>
+    <loc>https://monamaret.com/@sysadmin/</loc>
+  </url><url>
+    <loc>https://monamaret.com/@systemd/</loc>
   </url><url>
     <loc>https://monamaret.com/tags/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://monamaret.com/key0/</loc>
-  </url><url>
-    <loc>https://monamaret.com/key1/</loc>
-  </url><url>
-    <loc>https://monamaret.com/@tag-i/</loc>
-  </url><url>
-    <loc>https://monamaret.com/@tag-ii/</loc>
-  </url><url>
-    <loc>https://monamaret.com/@tag-iii/</loc>
+    <loc>https://monamaret.com/@tmux/</loc>
   </url>
 </urlset>

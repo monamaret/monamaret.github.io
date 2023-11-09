@@ -16,24 +16,6 @@
     </item>
     
     <item>
-      <title>linux</title>
-      <link>https://www.monamaret.com/@linux/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.monamaret.com/@linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>lsp</title>
-      <link>https://www.monamaret.com/@lsp/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.monamaret.com/@lsp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>nvim</title>
       <link>https://www.monamaret.com/@nvim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -49,15 +31,6 @@
       
       <guid>https://www.monamaret.com/@sysadmin/</guid>
       <description>I am mostly a Linux person but sometimes I have to manage Windows boxen too. Here is where I keep my notes on common processes and tasks for all general systems administration tasks not specific to a specific tool.</description>
-    </item>
-    
-    <item>
-      <title>systemd</title>
-      <link>https://www.monamaret.com/@systemd/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.monamaret.com/@systemd/</guid>
-      <description></description>
     </item>
     
     <item>

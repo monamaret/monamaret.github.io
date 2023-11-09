@@ -1,6 +1,7 @@
 ---
-title: Basic service install with SystemD 
-description: Basic service install with SystemD
+title: Running services with SystemD 
+description: How to deploy services with SystemD 
+draft: true
 tags:
     - sysadmin
     - linux

@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>lsp on Mona Maret</title><link>https://www.monamaret.com/@lsp/</link><description>Recent content in lsp on Mona Maret</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://www.monamaret.com/@lsp/index.xml" rel="self" type="application/rss+xml"/><item><title>Neovim LSP configuration</title><link>https://www.monamaret.com/neovim-lsp/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.monamaret.com/neovim-lsp/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>lsp on Mona Maret</title>
+    <link>https://www.monamaret.com/@lsp/</link>
+    <description>Recent content in lsp on Mona Maret</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://www.monamaret.com/@lsp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Neovim LSP configuration</title>
+      <link>https://www.monamaret.com/neovim-lsp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monamaret.com/neovim-lsp/</guid>
+      <description>At some point you might find yourself wanting to stay on the terminal for your development work instead of using something common that works well but eats up memory. If you already use Neovim, you can use an open source Language Server Protocol (LSP) implementation for your languages of choice and turn Neovim into an IDE.
+The historic solution up until mid-2023 or so was to use coc.nvim and indeed this is what VS Code uses under the hood for their LSP implementation.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,5 +1,55 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><title>Neovim LSP configuration | Mona Maret</title><meta name=robots content="index, follow"><meta name=description content="Neovim LSP configuration without tears"><meta name=generator content="hugo-index"><link crossorigin=anonymous href=https://www.monamaret.com/assets/stylesheet.css rel="preload stylesheet" as=style><script crossorigin=anonymous src=https://www.monamaret.com/assets/quicklink.js rel=preload as=script></script>
-<script>window.addEventListener("load",()=>{quicklink.listen()})</script></head><body><header><h1><a href=https://www.monamaret.com/><img src=https://www.monamaret.com/flip.svg alt="Mona Maret">
-<span>Mona Maret</span></a>
-<span class=hl>/</span>
-<a href=https://www.monamaret.com/neovim-lsp/><span>Neovim LSP configuration</span></a></h1><p class=desc>Neovim LSP configuration without tears</p></header><div class=main><ul class="tagsList single"><li><a href=https://www.monamaret.com/@nvim/>nvim</a></li><li><a href=https://www.monamaret.com/@lsp/>lsp</a></li></ul><div class=content></div></div><footer><hr><div class=footer-text><div>© 2023 Mona Maret</div><div>Powered by <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/adityatelange/hugo-index/>Index</a></div></div></footer></body></html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Neovim LSP configuration | Mona Maret</title>
+<meta name="robots" content='index, follow'>
+<meta name="description" content="Neovim LSP configuration without tears">
+<meta name="generator" content="hugo-index">
+<link crossorigin="anonymous" href="https://www.monamaret.com/assets/stylesheet.css" rel="preload stylesheet" as="style">
+<script crossorigin="anonymous" src="https://www.monamaret.com/assets/quicklink.js" rel="preload" as="script"></script>
+<script>
+    window.addEventListener('load', () => {
+        quicklink.listen();
+    });
+</script>
+
+  </head>
+  <body><header>
+  <h1>
+    <a href="https://www.monamaret.com/">
+      <img src="https://www.monamaret.com/flip.svg" alt="Mona Maret">
+      <span>Mona Maret</span>
+    </a>
+    <span class="hl">/</span>
+    <a href="https://www.monamaret.com/neovim-lsp/">
+      <span>Neovim LSP configuration</span>
+    </a>
+  </h1>
+  <p class="desc">Neovim LSP configuration without tears</p>
+</header>
+<div class="main">
+
+<ul class="tagsList single">
+  
+  <li><a href="https://www.monamaret.com/@nvim/">nvim</a></li>
+  
+  <li><a href="https://www.monamaret.com/@lsp/">lsp</a></li>
+  
+</ul>
+
+<div class="content"><p>At some point you might find yourself wanting to stay on the terminal for your development work instead of using something common that works well but eats up memory. If you already use Neovim, you can use an open source Language Server Protocol (LSP) implementation for your languages of choice and turn Neovim into an IDE.</p>
+<p>The historic solution up until mid-2023 or so was to use <a href="https://github.com/neoclide/coc.nvim">coc.nvim</a> and indeed this is what VS Code uses under the hood for their LSP implementation. But what if you cannot or do not want to deal with a NodeJS dependency?</p>
+<p>Neovim has a built-in LSP implementation that talks directly to the LSP servers, which makes CoC no longer necessary. This page details how to configure LSP for Neovim, specifically focusing on Golang, C/C++, and Rust. If this is your first rodeo with Neovim you should probably go through <a href="/basic-neovim">this page</a> first.</p>
+</div></div><footer>
+    <hr>
+    <div class="footer-text">
+        <div>© 2023 Mona Maret</div>
+        <div>Powered by <a href="https://gohugo.io/">Hugo</a> & <a
+                href="https://github.com/adityatelange/hugo-index/">Index</a></div>
+    </div>
+</footer>
+</body>
+</html>

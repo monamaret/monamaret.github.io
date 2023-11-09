@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Configuring tmux | Mona Maret</title>
 <meta name="robots" content='index, follow'>
-<meta name="description" content="Configuring tmux">
+<meta name="description" content="Basic Tmux configuration">
 <meta name="generator" content="hugo-index">
 <link crossorigin="anonymous" href="https://www.monamaret.com/assets/stylesheet.css" rel="preload stylesheet" as="style">
 <script crossorigin="anonymous" src="https://www.monamaret.com/assets/quicklink.js" rel="preload" as="script"></script>
@@ -28,7 +28,7 @@
       <span>Configuring tmux</span>
     </a>
   </h1>
-  <p class="desc">Configuring tmux</p>
+  <p class="desc">Basic Tmux configuration</p>
 </header>
 <div class="main">
 
@@ -38,7 +38,81 @@
   
 </ul>
 
-<div class="content"></div></div><footer>
+<div class="content"><p>If you want to become a Tmux power user the gold standard reference is of course <a href="1">the wiki</a> but it can be a bit overwhelming if you&rsquo;re just getting started and are trying to figure out the basics. There are also many good <a href="2">beginner guides</a> that go deep on why you might want to learn how to use Tmux and what it does for you. This page, however, is going to focus only on how to configure Tmux and some basic helpful tips, like how to copy/paste and how to scroll back through your history.</p>
+<p>This guide assumes you&rsquo;ve already installed Tmux. If you haven&rsquo;t done that yet, it is available in most package manager repositories as <code>tmux</code>. If you want the detailed instructions, see the wiki page on installing <a href="https://github.com/tmux/tmux/wiki/Installing">here</a>.</p>
+<h2 id="some-basic-commands-to-get-started">Some basic commands to get started</h2>
+<p>Tmux is mostly used with a keyboard and has an extensive set of keyboard commands. This can be intimidating the first time you launch it and aren&rsquo;t sure how it is any different from a regular terminal interface aside from the status line. You launch tmux from a terminal by typing <code>tmux new-session</code>. Within tmux, all commands are prefaced by a leader or command binding. The default is <code>Control + b</code>. After you enter this you have a couple of seconds to enter a second key or keys to take a specific actions. Here are some of the most common, note that the commands are case-sensitive:</p>
+<ul>
+<li><code>Ctrl+b d</code>: Detach from the current session. This does not end the Tmux session, so you can start a long-running command and then detach and it will continue without your interaction. Type <code>tmux attach</code> outside of tmux to re-attach to the running session.</li>
+<li><code>Ctrl+b %</code>: Create a new pane to the right of the current pane.</li>
+<li><code>Ctrl+b &quot;</code>: Create a new pane below the current pane.</li>
+<li><code>Ctrl+b [arrow]</code>: Navigate to another pane in the direction of the arrow pressed.</li>
+<li><code>Ctrl+b RAlt [arrow]</code>: Resize a pane. Hold the Right Alt key while pressing the arrow in the direction to resize.</li>
+<li><code>Ctrl+b x</code>: Kill the current pane.</li>
+<li><code>Ctrl+b c</code>: Create a new window.</li>
+<li><code>Ctrl+b &amp;</code>: Kill current window.</li>
+<li><code>Ctrl+b n</code>: Move to the next window (the window index is listed in the status line by default and the window name will be the running application).</li>
+<li><code>Ctrl+b w</code>: List all windows.</li>
+<li><code>Ctrl+b :</code>: access the tmux command prompt</li>
+<li><code>tmux kill-server</code>: kill all tmux sessions. This is run from outside tmux.</li>
+<li><code>tmux new -s [NAME]</code>: Start a new tmux session named [NAME].</li>
+<li><code>tmux attach -t [NAME]</code>: Attach to the named session.</li>
+</ul>
+<p>It&rsquo;s also helpful to understand going in that tmux has three discrete levels of organization: sessions, windows and panes. See <a href="https://github.com/tmux/tmux/wiki/Getting-Started#sessions-windows-and-panes">this section</a> of the wiki getting started guide to understand the difference.</p>
+<h2 id="the-config-file">The config file</h2>
+<p>Tmux is configured by editing a file named <code>tmux.conf</code> that will be placed in your home directory after installing or in <code>~/.config</code>.</p>
+<p>Comments in the config file are prefaced by <code>#</code> and are ignored. Configuration directives are tmux commands are are executed in the order they appear in the file. Environment variables can be set in the tmux file but shell constructs like <code>$()</code> will not be read.</p>
+<p>Note that the default <code>tmux.conf</code> will be created as an invisible file in the user&rsquo;s home directory (<code>~/.tmux.conf</code>), but if you move it to the config directory, it needs to be visible (<code>~/.config/tmux/tmux.conf</code>) in order to be sourced by tmux.</p>
+<h2 id="reloading-the-config-file-after-changes">Reloading the config file after changes</h2>
+<p>If you make changes to the config file, you can reload the changed file from a running tmux server by accessing the command prompt (<code>Ctrl+b :</code>) and typing the command <code>source</code> with the location of the config file:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>:source ~/.config/tmux.conf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>The status line will temporarily change color to indicate the config has been reloaded.</p>
+<p>You can also set a new keybinding to make sourcing the config file easier by adding the following to the config file (make sure you enter the correct location if your file is in a different location than below):</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>unbind r
+</span></span><span style="display:flex;"><span>bind r source-file ~/.config/tmux/tmux.conf \; display &#34;Reloaded tmux conf&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>After setting this, before using it the first time, you&rsquo;ll need to kill the tmux server and then relaunch in order to pick up the changes. After that you can use the new keyboard command (<code>Ctrl+b r</code>) to reload the config without restarting the server.</p>
+<h2 id="history-buffer-and-scrolling-back">History buffer and scrolling back</h2>
+<p>hdaighdhg</p>
+<h2 id="copy-and-paste">Copy and paste</h2>
+<p>asihauihdgh</p>
+<h2 id="using-a-mouse-to-select">Using a mouse to select</h2>
+<p>dhgjkhdg</p>
+<h2 id="changing-the-leader-key">Changing the leader key</h2>
+<p>akhjkhg</p>
+<h2 id="changing-the-appearance-and-colors">Changing the appearance and colors</h2>
+<p>ajihgkoahg</p>
+<h2 id="changing-the-font">Changing the font</h2>
+<p>ahdhgoha</p>
+<h2 id="changing-the-statusline">Changing the statusline</h2>
+<p>aihiohgh</p>
+<h2 id="using-plugins">Using plugins</h2>
+<p>aoihdiogdhag</p>
+<h2 id="key-binding-table">Key binding table</h2>
+<p>alhgdhgakhg</p>
+<hr>
+<h3 id="references">References</h3>
+<ul>
+<li>[1]: <a href="https://github.com/tmux/tmux/wiki">Tmux wiki</a>.</li>
+<li>[2]: <a href="https://www.redhat.com/sysadmin/introduction-tmux-linux">Red Hat&rsquo;s beginner&rsquo;s guide to tmux</a>.</li>
+<li>[3]: <a href="https://man.openbsd.org/tmux">Man page</a>.</li>
+<li>[4]: <a href="https://opensource.com/downloads/tmux-cheat-sheet?intcmp=701f20000012ngPAAQ">Opensource.com&rsquo;s Tmux Cheatsheet</a>.</li>
+</ul>
+</div></div><footer>
     <hr>
     <div class="footer-text">
         <div>© 2023 Mona Maret</div>

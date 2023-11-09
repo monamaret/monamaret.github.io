@@ -40,7 +40,10 @@
   
 </ul>
 
-<div class="content"></div></div><footer>
+<div class="content"><p>At some point you might find yourself wanting to stay on the terminal for your development work instead of using something common that works well but eats up memory. If you already use Neovim, you can use an open source Language Server Protocol (LSP) implementation for your languages of choice and turn Neovim into an IDE.</p>
+<p>The historic solution up until mid-2023 or so was to use <a href="https://github.com/neoclide/coc.nvim">coc.nvim</a> and indeed this is what VS Code uses under the hood for their LSP implementation. But what if you cannot or do not want to deal with a NodeJS dependency?</p>
+<p>Neovim has a built-in LSP implementation that talks directly to the LSP servers, which makes CoC no longer necessary. This page details how to configure LSP for Neovim, specifically focusing on Golang, C/C++, and Rust. If this is your first rodeo with Neovim you should probably go through <a href="/basic-neovim">this page</a> first.</p>
+</div></div><footer>
     <hr>
     <div class="footer-text">
         <div>© 2023 Mona Maret</div>

@@ -165,10 +165,20 @@
 <p>Buffers can be an exceptionally powerful tool if you choose use Neovim as an IDE.</p>
 <h3 id="windows-and-tabs">Windows and tabs</h3>
 <p>A window is a viewport on a buffer. A tab page is a collection of windows. This might seem like overkill if you&rsquo;re used to a GUI but think about how you actually use an IDE: there are a bunch of files, and you usually have several open at any one time while you move back and forth between them.</p>
-<p>Windows are created and closed and organized into tabs, but the buffer is still in the buffer list. Here are some relevant commands:</p>
+<p>Windows are created and closed and organized into tabs, but the buffer is still in the buffer list. See <code>:help usr_08.txt</code> for detailed documentation on windows (also available online <a href="https://neovim.io/doc/user/usr_08.html">here</a>) and <code>:help tab-page</code>.</p>
+<p>Useful commands:</p>
 <ul>
-<li></li>
+<li><code>Ctrl + W S</code> or <code>:split</code>: split a window into two viewports on the same file</li>
+<li><code>Ctrl +V</code> or <code>:vsplit</code>: split a window but vertically</li>
+<li><code>:new</code>: create a new file in a new window</li>
+<li><code>:split_f [filename]</code>: open a new window containing [filename]</li>
+<li><code>:tabnew</code>: open a new tab</li>
+<li><code>:tabclose</code> or <code>:tabc</code>: close the current tab</li>
+<li><code>:tabo</code>: close every other tab but the current one</li>
+<li><code>gt</code>: go to next tab</li>
+<li><code>gT</code>: go to previous tab</li>
 </ul>
+<p>Depending on how much screen real estate you have available you may want to take a look directly at the Neovim <a href="https://neovim.io/doc/user/usr_08.html#08.9">documentation page on tabs</a> before going wild with windows and buffers.</p>
 <h3 id="argument-list">Argument list</h3>
 <p>The argument list, or arglist, is best described as a stable subset of the buffer list. Every file in the arglist will be in the buffer list; some files in the buffer list might not be in the arg list. Here are some relevant commands:</p>
 <ul>
@@ -253,12 +263,22 @@
 </span></span><span style="display:flex;"><span>set clipboard+=unnamedplus
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="mapping-keystrokes">Mapping keystrokes</h3>
-<p>aiohioghaiodgh</p>
-<h2 id="plugins">Plugins</h2>
-<p>akhoahpdiogha</p>
+</div><h2 id="plugins">Plugins</h2>
+<p>Neovim is extensible and has a healthy and diverse plugin ecosystem. One thing to keep in mind about plugins is that relying too heavily on them can make using Vim on different computers difficult or unfamiliar.</p>
 <h3 id="vim-plug">Vim-plug</h3>
-<p>aokdhgohdgoihdg</p>
+<p>My preferred plugin manager for Neovim is <a href="https://github.com/junegunn/vim-plug">vim-plug</a>. There are several alternatives; if you don&rsquo;t like vim-plug or want to use a plugin available for another manager like <a href="https://github.com/VundleVim/Vundle.vim">vundle</a>, the nice thing is the install process on all of them is pretty lightweight.</p>
+<p>The vim-plug install instructions for Neovim are <a href="https://github.com/junegunn/vim-plug#neovim">here</a>. When you&rsquo;ve downloaded vim-plug to your computer you&rsquo;ll also need to add the following to the <em>beginning</em> of your <code>init.vim</code> file:</p>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>call plug#begin(&#34;~/.config/nvim/plugged&#34;)
+</span></span><span style="display:flex;"><span>call plug#end()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Be sure to change the directory if you&rsquo;re saving your config and plugin files elsewhere. You can see a configuration example <a href="https://github.com/junegunn/vim-plug#example">here</a> - note the detail in the comments about avoiding plugin directory names like &ldquo;plugin&rdquo;.</p>
 <h3 id="automatically-installing-the-plugin-manager">Automatically installing the plugin manager</h3>
 <p>khasdguohdgioha;diohg</p>
 <h3 id="status-bar">Status bar</h3>
@@ -274,6 +294,7 @@
 <li><a href="https://neovim.io/doc/user/vimindex.html">Neovim command index</a></li>
 <li><a href="https://neovim.io/doc/user/options.html">Neovim options</a></li>
 <li><a href="https://neovim.io/doc/user/provider.html#clipboard">Neovim providers: clipboard</a></li>
+<li><a href="https://neovim.io/doc/user/usr_08.html">Neovim user guide part 8: Windows</a></li>
 </ul>
 </div></div><footer>
     <hr>

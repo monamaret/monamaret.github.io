@@ -248,23 +248,52 @@ set clipboard+=unnamedplus
 
 ## Plugins
 
-Neovim is extensible and has a healthy and diverse plugin ecosystem. One thing to keep in mind about plugins is that relying too heavily on them can make using Vim on different computers difficult or unfamiliar. This document will describe how to install and configure a plugin manager but the only plugins shared are superficial ones related to the physical appearance of Neovim. 
+Neovim is extensible and has a healthy and diverse plugin ecosystem. One thing to keep in mind about plugins is that relying too heavily on those that change standard commands or add a lot of features can make using Vim on different computers difficult or unfamiliar.
 
 ### Vim-plug
 
-aokdhgohdgoihdg
+My preferred plugin manager for Neovim is [vim-plug](https://github.com/junegunn/vim-plug). There are several alternatives; if you don't like vim-plug or want to use a plugin available for another manager like [vundle](https://github.com/VundleVim/Vundle.vim), the nice thing is the install process on all of them is pretty lightweight.
+
+The vim-plug install instructions for Neovim are [here](https://github.com/junegunn/vim-plug#neovim). When you've downloaded vim-plug to your computer you'll also need to add the following to the *beginning* of your `init.vim` file before any other configuration directives:
+
+```
+call plug#begin('~/.config/nvim/plugged')
+call plug#end()
+```
+
+Be sure to change the directory if you're saving your config and plugin files elsewhere. You can see a detailed and commented configuration example [here](https://github.com/junegunn/vim-plug#example) - note the detail in the comments about avoiding plugin directory names like "plugin". Note also that you'll need to use single quotes for paths and plugins in `init.vim` because the double quote is the comment delimiter.
+
+### Installing plugins via vim-plug
+
+Installing plugins is a two part process:
+
+1) Create an entry for the plugin between the `call plug#begin()` and `call plug#end()` statements in your `init.vim` file that looks like so:
+    - `Plug 'repositoryowner/repositoryname.vim'`
+2) Install the plugin by running the following command in Neovim:
+    - `:PlugInstall`
+
+When you run `:PlugInstall` a second window will open in Neovim showing you the progress of the install and, if there were any problems, the error messages.
 
 ### Automatically installing the plugin manager
 
-khasdguohdgioha;diohg
+If you [use a script to manage your dotfiles](/dotfiles-management) you can also use it to automatically install vim-plug and your plugins when you set up a new computer. See [this section](https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation) of the vim-plug tips. You can also see a working example in my dotfiles management script [here](https://github.com/monamaret/dotfiles/blob/366587977b36148a567f23b121d2862bed2942ea/install.sh#L11).
 
-### Status bar
+### Statusline
 
-ahgodhagohiaed
+Want to configure the statusline in some way? There are a number of plugins that allow you to do all sorts of things to the statusline. I'll admit the primary reason I do this is to enable matching the color scheme of the statusline with the colorscheme of Neovim. Not all colorschemes address the statusline.
+
+I use [Lightline](https://github.com/itchyny/lightline.vim) because it is well-documented. I also like it because it makes it very obvious what mode I am in by changing the color when switching modes.
 
 ### Color scheme
 
-ahdgijhadpoghaudiohg
+Want to change the color scheme of Neovim? There are many plugins available for vim-plug. [This repository](https://github.com/rafi/awesome-vim-colorschemes) has a great list. Add the desired scheme as a plugin in the vim-plug plugin list in your `init.vim`, run `:PlugInstall`, then add the color scheme to your `init.vim` file like so:
+
+```
+" color scheme
+colo [colorscheme-name]
+```
+
+You may need to close and relaunch Neovim for the changes to take effect.
 
 ___
 
@@ -277,3 +306,5 @@ ___
 - [Neovim options](https://neovim.io/doc/user/options.html)
 - [Neovim providers: clipboard](https://neovim.io/doc/user/provider.html#clipboard)
 - [Neovim user guide part 8: Windows](https://neovim.io/doc/user/usr_08.html)
+- [vim-plug tips](https://github.com/junegunn/vim-plug/wiki/tips)
+- [awesome-vim-colorschemes](https://github.com/rafi/awesome-vim-colorschemes)

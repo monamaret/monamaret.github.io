@@ -4,9 +4,13 @@
   <url>
     <loc>https://www.monamaret.com/basic-neovim/</loc>
   </url><url>
+    <loc>https://www.monamaret.com/tmux-config/</loc>
+  </url><url>
     <loc>https://www.monamaret.com/@dotfiles/</loc>
   </url><url>
     <loc>https://www.monamaret.com/</loc>
+  </url><url>
+    <loc>https://www.monamaret.com/@lua/</loc>
   </url><url>
     <loc>https://www.monamaret.com/dotfiles-management/</loc>
   </url><url>
@@ -17,5 +21,7 @@
     <loc>https://www.monamaret.com/tags/</loc>
   </url><url>
     <loc>https://www.monamaret.com/@tmux/</loc>
+  </url><url>
+    <loc>https://www.monamaret.com/lua-neovim/</loc>
   </url>
 </urlset>

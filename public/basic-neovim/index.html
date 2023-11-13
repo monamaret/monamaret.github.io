@@ -191,100 +191,68 @@
 <p>Neovim is configured with a file called <code>init.vim</code> that lives in the user&rsquo;s home directory or <code>~/.config/nvim/init.vim</code>. The comment delimiter is <code>&quot;</code>. Configuration options can be turned on directly within Neovim by using the <code>:set</code> command. See <code>:help options</code> and <code>help option-list</code> for more details, or <a href="https://neovim.io/doc/user/options.html">this page</a> in the docs.</p>
 <h3 id="swap-file">Swap file</h3>
 <p>If you use version control you probably don&rsquo;t need to use a swap file (the swap file prevents you from modifying a file which is open in another Neovim process). Turn it off with this option:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&#34; set no swap file
-</span></span><span style="display:flex;"><span>set noswapfile
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="undo-tree">Undo tree</h3>
+<pre tabindex="0"><code>&#34; set no swap file
+set noswapfile
+</code></pre><h3 id="undo-tree">Undo tree</h3>
 <p>The built-in undo command will undo and redo the last edits, Neovim has the capability to track every change made to a file and save that to disk. This means you can undo and redo even after closing and reopening a file. Set it like so:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&#34; save undo tree in file
-</span></span><span style="display:flex;"><span>set undofile
-</span></span><span style="display:flex;"><span>set undodir=$HOME/.config/nvim/undo
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>&#34; number of undo saved
-</span></span><span style="display:flex;"><span>set undolevels=10000
-</span></span><span style="display:flex;"><span>set undoreload=10000
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="general-options">General options</h3>
+<pre tabindex="0"><code>&#34; save undo tree in file
+set undofile
+set undodir=$HOME/.config/nvim/undo
+
+&#34; number of undo saved
+set undolevels=10000
+set undoreload=10000
+</code></pre><h3 id="general-options">General options</h3>
 <p>Add some nice standard general options:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&#34; set line number
-</span></span><span style="display:flex;"><span>set number
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>&#34; use 2 spaces instead of tab
-</span></span><span style="display:flex;"><span>&#34; copy indent from current line when starting a new line
-</span></span><span style="display:flex;"><span>set autoindent
-</span></span><span style="display:flex;"><span>set expandtab
-</span></span><span style="display:flex;"><span>set tabstop=2
-</span></span><span style="display:flex;"><span>set softtabstop=2
-</span></span><span style="display:flex;"><span>set shiftwidth=2
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>&#34; set mouse support in Normal and Visual mode
-</span></span><span style="display:flex;"><span>set mouse=nv
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>&#34; add OS clipboard support
-</span></span><span style="display:flex;"><span>set clipboard+=unnamedplus
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="plugins">Plugins</h2>
-<p>Neovim is extensible and has a healthy and diverse plugin ecosystem. One thing to keep in mind about plugins is that relying too heavily on them can make using Vim on different computers difficult or unfamiliar.</p>
+<pre tabindex="0"><code>&#34; set line number
+set number
+
+&#34; use 2 spaces instead of tab
+&#34; copy indent from current line when starting a new line
+set autoindent
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+
+&#34; set mouse support in Normal and Visual mode
+set mouse=nv
+
+&#34; add OS clipboard support
+set clipboard+=unnamedplus
+</code></pre><h2 id="plugins">Plugins</h2>
+<p>Neovim is extensible and has a healthy and diverse plugin ecosystem. One thing to keep in mind about plugins is that relying too heavily on those that change standard commands or add a lot of features can make using Vim on different computers difficult or unfamiliar.</p>
 <h3 id="vim-plug">Vim-plug</h3>
 <p>My preferred plugin manager for Neovim is <a href="https://github.com/junegunn/vim-plug">vim-plug</a>. There are several alternatives; if you don&rsquo;t like vim-plug or want to use a plugin available for another manager like <a href="https://github.com/VundleVim/Vundle.vim">vundle</a>, the nice thing is the install process on all of them is pretty lightweight.</p>
-<p>The vim-plug install instructions for Neovim are <a href="https://github.com/junegunn/vim-plug#neovim">here</a>. When you&rsquo;ve downloaded vim-plug to your computer you&rsquo;ll also need to add the following to the <em>beginning</em> of your <code>init.vim</code> file:</p>
-<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>call plug#begin(&#34;~/.config/nvim/plugged&#34;)
-</span></span><span style="display:flex;"><span>call plug#end()
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>Be sure to change the directory if you&rsquo;re saving your config and plugin files elsewhere. You can see a configuration example <a href="https://github.com/junegunn/vim-plug#example">here</a> - note the detail in the comments about avoiding plugin directory names like &ldquo;plugin&rdquo;.</p>
+<p>The vim-plug install instructions for Neovim are <a href="https://github.com/junegunn/vim-plug#neovim">here</a>. When you&rsquo;ve downloaded vim-plug to your computer you&rsquo;ll also need to add the following to the <em>beginning</em> of your <code>init.vim</code> file before any other configuration directives:</p>
+<pre tabindex="0"><code>call plug#begin(&#39;~/.config/nvim/plugged&#39;)
+call plug#end()
+</code></pre><p>Be sure to change the directory if you&rsquo;re saving your config and plugin files elsewhere. You can see a detailed and commented configuration example <a href="https://github.com/junegunn/vim-plug#example">here</a> - note the detail in the comments about avoiding plugin directory names like &ldquo;plugin&rdquo;. Note also that you&rsquo;ll need to use single quotes for paths and plugins in <code>init.vim</code> because the double quote is the comment delimiter.</p>
+<h3 id="installing-plugins-via-vim-plug">Installing plugins via vim-plug</h3>
+<p>Installing plugins is a two part process:</p>
+<ol>
+<li>Create an entry for the plugin between the <code>call plug#begin()</code> and <code>call plug#end()</code> statements in your <code>init.vim</code> file that looks like so:
+<ul>
+<li><code>Plug 'repositoryowner/repositoryname.vim'</code></li>
+</ul>
+</li>
+<li>Install the plugin by running the following command in Neovim:
+<ul>
+<li><code>:PlugInstall</code></li>
+</ul>
+</li>
+</ol>
+<p>When you run <code>:PlugInstall</code> a second window will open in Neovim showing you the progress of the install and, if there were any problems, the error messages.</p>
 <h3 id="automatically-installing-the-plugin-manager">Automatically installing the plugin manager</h3>
-<p>khasdguohdgioha;diohg</p>
-<h3 id="status-bar">Status bar</h3>
-<p>ahgodhagohiaed</p>
+<p>If you <a href="/dotfiles-management">use a script to manage your dotfiles</a> you can also use it to automatically install vim-plug and your plugins when you set up a new computer. See <a href="https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation">this section</a> of the vim-plug tips. You can also see a working example in my dotfiles management script <a href="https://github.com/monamaret/dotfiles/blob/366587977b36148a567f23b121d2862bed2942ea/install.sh#L11">here</a>.</p>
+<h3 id="statusline">Statusline</h3>
+<p>Want to configure the statusline in some way? There are a number of plugins that allow you to do all sorts of things to the statusline. I&rsquo;ll admit the primary reason I do this is to enable matching the color scheme of the statusline with the colorscheme of Neovim. Not all colorschemes address the statusline.</p>
+<p>I use <a href="https://github.com/itchyny/lightline.vim">Lightline</a> because it is well-documented. I also like it because it makes it very obvious what mode I am in by changing the color when switching modes.</p>
 <h3 id="color-scheme">Color scheme</h3>
-<p>ahdgijhadpoghaudiohg</p>
+<p>Want to change the color scheme of Neovim? There are many plugins available for vim-plug. <a href="https://github.com/rafi/awesome-vim-colorschemes">This repository</a> has a great list. Add the desired scheme as a plugin in the vim-plug plugin list in your <code>init.vim</code>, run <code>:PlugInstall</code>, then add the color scheme to your <code>init.vim</code> file like so:</p>
+<pre tabindex="0"><code>&#34; color scheme
+colo [colorscheme-name]
+</code></pre><p>You may need to close and relaunch Neovim for the changes to take effect.</p>
 <hr>
 <h3 id="references">References</h3>
 <ul>
@@ -295,6 +263,8 @@
 <li><a href="https://neovim.io/doc/user/options.html">Neovim options</a></li>
 <li><a href="https://neovim.io/doc/user/provider.html#clipboard">Neovim providers: clipboard</a></li>
 <li><a href="https://neovim.io/doc/user/usr_08.html">Neovim user guide part 8: Windows</a></li>
+<li><a href="https://github.com/junegunn/vim-plug/wiki/tips">vim-plug tips</a></li>
+<li><a href="https://github.com/rafi/awesome-vim-colorschemes">awesome-vim-colorschemes</a></li>
 </ul>
 </div></div><footer>
     <hr>

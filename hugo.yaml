@@ -9,9 +9,10 @@ enableInLineShortcodes: true
 
 markup:
   highlight:
-    codeFences: true
-    guessSyntax: true
-    lineNos: true 
+    pygmentsCodeFences: true
+    pygmentsUseClasses: true 
+    pygmentsCodeFencesGuessSyntax: false 
+    pygmentsUseClassic: true
   goldmark:
     renderer:
       unsafe: true

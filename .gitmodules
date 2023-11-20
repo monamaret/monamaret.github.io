@@ -1,3 +1,6 @@
 [submodule "themes/index"]
 	path = themes/index
 	url = https://github.com/adityatelange/hugo-index.git
+[submodule "content"]
+	path = content
+	url = git@github.com:monamaret/monamaret-content.git

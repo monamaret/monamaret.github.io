@@ -1,2 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>lua on Mona Maret</title><link>https://www.monamaret.com/@lua/</link><description>Recent content in lua on Mona Maret</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://www.monamaret.com/@lua/index.xml" rel="self" type="application/rss+xml"/><item><title>Using Lua within Neovim configuration</title><link>https://www.monamaret.com/lua-neovim/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.monamaret.com/lua-neovim/</guid><description>You can use Lua script to configure Neovim, but why might you want to do that? The Vim and Neovim API are written in C, and Lua runs in the C engine; since Lua is significantly easier to write and read than C or even Vimscript, Lua can be used to write complex configuration directives.
-Another more explicit reason to use it is because many useful Neovim plugins are written in Lua (like the autocompletion plugins used when setting up Neovim as an IDE) and require extensive configuration directives that can clutter up your init.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>lua on Mona Maret</title>
+    <link>https://www.monamaret.com/@lua/</link>
+    <description>Recent content in lua on Mona Maret</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://www.monamaret.com/@lua/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Lua within Neovim configuration</title>
+      <link>https://www.monamaret.com/lua-neovim/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.monamaret.com/lua-neovim/</guid>
+      <description>You can use Lua script to configure Neovim, but why might you want to do that? The Vim and Neovim API are written in C, and Lua runs in the C engine; since Lua is significantly easier to write and read than C or even Vimscript, Lua can be used to write complex configuration directives.
+Another more explicit reason to use it is because many useful Neovim plugins are written in Lua (like the autocompletion plugins used when setting up Neovim as an IDE) and require extensive configuration directives that can clutter up your init.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -46,10 +46,31 @@
 <h2 id="embedded-lua">Embedded Lua</h2>
 <p>If you want to keep all you configuration in a single big file, you can embed the Lua portion between a block like so:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span>lua <span style="color:#f92672">&lt;&lt;</span> EOF
-</span></span><span style="display:flex;"><span>lua print(<span style="color:#e6db74">&#39;hi from lua&#39;</span>)
+</span></span><span style="display:flex;"><span>  lua print(<span style="color:#e6db74">&#39;hi from lua&#39;</span>)
 </span></span><span style="display:flex;"><span>EOF
 </span></span></code></pre></div><p>You can see a big config example using this in the <a href="https://github.com/hrsh7th/nvim-cmp#setup">nvim-cmp</a> example setup.</p>
 <h2 id="calling-an-external-lua-script">Calling an external Lua script</h2>
+<p>If you want to break your configuration into multiple files, you can use the <code>require</code> function and call the script from a location within Neovim&rsquo;s <code>runtimepath</code>. The standard location is within a <code>lua</code> file within the <code>nvim</code> folder where your <code>init.vim</code> lives:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>.config
+</span></span><span style="display:flex;"><span>|-- nvim
+</span></span><span style="display:flex;"><span>  |-- autoload/
+</span></span><span style="display:flex;"><span>  |-- init.vim
+</span></span><span style="display:flex;"><span>  |-- lua/
+</span></span><span style="display:flex;"><span>    |-- myluamodule.lua
+</span></span><span style="display:flex;"><span>    |-- othermodules/
+</span></span><span style="display:flex;"><span>      |-- anothermodule.lua
+</span></span><span style="display:flex;"><span>  |-- plugin/
+</span></span><span style="display:flex;"><span>  |-- syntax/
+</span></span></code></pre></div><p>Then the following will load <code>myluamodule.lua</code> from <code>init.vim</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span>require(<span style="color:#e6db74">&#39;myluamodule&#39;</span>)
+</span></span></code></pre></div><p>If the external script is located in a subdirectory it will be called like so:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span>require(<span style="color:#e6db74">&#39;othermodules/anothermodule&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- or</span>
+</span></span><span style="display:flex;"><span>require(<span style="color:#e6db74">&#39;othermodules.anothermodule&#39;</span>)
+</span></span></code></pre></div><p>Note that <code>require()</code> not only searching through all <code>lua/</code> directories under the <code>runtimepath</code>, it will also cache the module on first use. Calling <code>require()</code> a second time will <em>not</em> execute the script again and instead return the cached file. To rerun the file, you can remove it from the cache manually first:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span>package.loaded[<span style="color:#e6db74">&#39;myluamodule&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#66d9ef">nil</span>
+</span></span><span style="display:flex;"><span>require(<span style="color:#e6db74">&#39;myluamodule&#39;</span>) <span style="color:#75715e">-- read and execute the module again from disk</span>
+</span></span></code></pre></div><p>To run other Lua scripts automatically on startup, they can go in the <code>plugin</code> directory in the <code>runtimepath</code>. No <code>require</code> function is used in this case.</p>
 <hr>
 <h2 id="references">References</h2>
 <ul>
